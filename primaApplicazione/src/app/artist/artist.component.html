@@ -1,1 +1,14 @@
-<p>artist works!</p>
+<div *ngIf="artist">
+    <h1>{{ artist.name }}</h1>
+    <p>
+        <img src="{{ artist.images[1].url }}">
+    </p>
+    <p>
+        Followers: {{artist.followers}}<br>
+        Genres: {{artist.genres}}<br>
+        Name: {{artist.name}}<br>
+        Popularity: {{artist.popularity}}<br>
+        Type: {{artist.type}}<br>
+    </p>
+    <p><a href (click)="back()">Back</a></p>
+</div>
