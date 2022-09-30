@@ -4,11 +4,11 @@
         <img src="{{ artist.images[1].url }}">
     </p>
     <p>
-        Followers: {{artist.followers}}<br>
+        Followers: {{artist.followers.total}}<br>
         Genres: {{artist.genres}}<br>
         Name: {{artist.name}}<br>
         Popularity: {{artist.popularity}}<br>
         Type: {{artist.type}}<br>
     </p>
-    <p><a href (click)="back()">Back</a></p>
+    <p><a class="btn btn-primary" href (click)="back()">Back</a></p>
 </div>
