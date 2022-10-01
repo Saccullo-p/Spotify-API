@@ -1,1 +1,24 @@
-<p>album works!</p>
+<div *ngIf="album">
+    <h1>{{ album.name }}</h1>
+    <p>
+        <img src="{{ album.images[1].url }}">
+    </p>
+    <div>
+        <h1>Album: {{album.name}}</h1>
+        <h3>Artist: {{album.artists[0].name}}</h3>
+        <div class="ui list">
+            <li class="item">Release Date: {{album.release_date}}</li>
+            <li class="item">Total Tracks: {{album.tracks.total}}</li>
+            <li class="item">Popularity: {{album.popularity}}</li>
+        </div>
+    
+    <div *ngFor="let track of album.tracks.items">
+        <li>
+            <hr>
+            <h5>{{track.track_number}} - {{track.name}}</h5>
+            <a class="ui primary button" target="_blank" href="{{track.preview_url}}">Preview Track</a>
+            <hr>
+        </li>
+    </div>
+    <p><a class="btn btn-primary" href (click)="back()">Back</a></p>
+</div>

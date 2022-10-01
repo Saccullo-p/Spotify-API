@@ -10,7 +10,7 @@ import {Location} from '@angular/common';
   styleUrls: ['./artist.component.css']
 })
 export class ArtistComponent implements OnInit {
-  //Osserva gli eventi sulla route artists, restituisce la ParamMap che contiene tutti i   
+  //Osserva gli eventi sulla route albums, restituisce la ParamMap che contiene tutti i   
   //parametri passati all’url
   routeObs!: Observable<ParamMap>; 
 
@@ -31,7 +31,6 @@ export class ArtistComponent implements OnInit {
     this.routeObs.subscribe(this.getRouterParam);
   }
 
-  //Ogni volta che viene invocata la route artists/:id, l'observable richiama questo metodo
   //Ogni volta che viene invocata la route artists/:id, l'observable richiama questo metodo
   getRouterParam = (params: ParamMap) =>
   {

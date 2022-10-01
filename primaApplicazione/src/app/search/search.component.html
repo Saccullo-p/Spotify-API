@@ -4,6 +4,7 @@
   <p>
     <input type="text" #newquery> &nbsp;
     <button type="button" class="btn btn-primary btn-sm"(click)="submit(newquery)">Search</button>
+    <button (click)="clear()" class="btn btn-primary" style="margin-left: 10px;">Clear</button>
   </p>
 
   <div *ngIf="results">
@@ -25,18 +26,18 @@
                   </a>
                 </h3>
                 <br>
-                <p>
+                <h3>
                   <a [routerLink]="['/tracks', t.id]">
                     {{ t.name }}
                   </a>
-                </p>
+                </h3>
               </div>
               <div class="attribution">
-                <h4>
+                <h3>
                   <a [routerLink]="['/albums', t.album.id]">
                     {{ t.album.name }}
                   </a>
-                </h4>
+                </h3>
               </div>
             </div>
           </div>

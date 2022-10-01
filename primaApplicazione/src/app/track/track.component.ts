@@ -32,7 +32,6 @@ export class TrackComponent implements OnInit {
   }
 
   //Ogni volta che viene invocata la route tracks/:id, l'observable richiama questo metodo
-  //Ogni volta che viene invocata la route tracks/:id, l'observable richiama questo metodo
   getRouterParam = (params: ParamMap) =>
   {
     let trackId = params.get('id'); //Ottengo l'id dai parametri
